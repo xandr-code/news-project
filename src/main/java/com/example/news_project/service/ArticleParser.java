@@ -34,10 +34,6 @@ public class ArticleParser {
         return List.of(parseHtmlPage(source.getUrl()));
     }
 
-    public void refresh() {
-        for (Import)
-    }
-
     private List<NewsCandidate> parseFeed(Elements items, String sourceUrl) {
         List<NewsCandidate> candidates = new ArrayList<>();
         for (Element item : items) {

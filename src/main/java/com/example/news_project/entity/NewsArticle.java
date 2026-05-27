@@ -12,6 +12,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
@@ -24,6 +25,7 @@ import java.time.LocalDateTime;
                 @Index(name = "idx_article_category", columnList = "category")
         }
 )
+@Data
 public class NewsArticle {
 
     @Id

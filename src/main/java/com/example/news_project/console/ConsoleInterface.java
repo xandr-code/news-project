@@ -20,12 +20,13 @@ public class ConsoleInterface implements ApplicationRunner {
     ConfigurableApplicationContext context;
     NewsImportService importService;
 
-    public ConsoleInterface(AnalyticService analyticService, ArticleSearchService articleSearchService, SourceService sourceService, ExportService exportService, ConfigurableApplicationContext context) {
+    public ConsoleInterface(AnalyticService analyticService, ArticleSearchService articleSearchService, SourceService sourceService, ExportService exportService, ConfigurableApplicationContext context, NewsImportService importService) {
         this.analyticService = analyticService;
         this.articleSearchService = articleSearchService;
         this.sourceService = sourceService;
         this.exportService = exportService;
         this.context = context;
+        this.importService = importService;
     }
 
     @Override
@@ -59,6 +60,7 @@ public class ConsoleInterface implements ApplicationRunner {
         } else if (command.equals("2")) {
             System.out.println("Вывод обновленных пользователей");
             importService.refreshAll();
+            System.out.println();
         }
     }
     private void printArticles(List<NewsArticle> articles) {

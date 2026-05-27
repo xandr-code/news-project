@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 public class NewsCandidate {
     String title;
-    String Url;
+    String url;
     String description;
     String mediaUrl;
     String content;
